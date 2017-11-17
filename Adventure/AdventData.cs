@@ -1958,11 +1958,13 @@ namespace AdventureCS
                 set { aData.sTravCnt = value; }
             }
 
-            public class VOCABTAB
-            {
-                public int key;             // sWord
-                public string pWord;         //char* pWord;
-            };
+            //public class VOCABTAB
+            //{
+            //    public int key = 0;             // sWord
+            //    public string pWord = 0;        //char* pWord;
+            //};
+
+
             int nVocabCount = 0;
             private string word1;
             private string word2;

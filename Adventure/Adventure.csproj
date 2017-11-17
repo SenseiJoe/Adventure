@@ -7,8 +7,8 @@
     <ProjectGuid>{D09D33C3-7B5F-4958-8B7A-6C3FF48B977C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AdventureCS</RootNamespace>
-    <AssemblyName>AdventureCS</AssemblyName>
+    <RootNamespace>Adventure</RootNamespace>
+    <AssemblyName>Adventure</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
