@@ -19,7 +19,7 @@ namespace AdventureCS
 
             Console.Write("\nWhat do you want to call the saved game? ");
             strUserName = Console.ReadLine();
-            strUserName.ToUpper();
+            strUserName = strUserName.ToUpper();
 
             if (strUserName.Length == 0)
                 strUserName = "SAVE";
