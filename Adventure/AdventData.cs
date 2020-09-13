@@ -244,7 +244,7 @@ namespace AdventureCS
         }
 
         #region Travel Tables
-        int[,] Trav001 = new int[16, 3] 
+        readonly int[,] Trav001 = new int[16, 3] 
         {
             {	2,   2,   0 },
             {	2,  44,   0 },
@@ -264,7 +264,7 @@ namespace AdventureCS
             {	8,  63,   0 },
         };
 
-        int[,] Trav002 = new int[9, 3] 
+        readonly int[,] Trav002 = new int[9, 3] 
         {
             {	1,   2,   0 },
             {	1,  12,   0 },
@@ -277,7 +277,7 @@ namespace AdventureCS
             {	5,  46,   0 },
         };
 
-        int[,] Trav003 = new int[8, 3] 
+        readonly int[,] Trav003 = new int[8, 3] 
         {
             {	1,   3,   0 },
             {	1,  11,   0 },
@@ -289,7 +289,7 @@ namespace AdventureCS
             {  79,  14,   0 },
         };
 
-        int[,] Trav004 = new int[11, 3] 
+        readonly int[,] Trav004 = new int[11, 3] 
         {
             {	1,   4,   0 },
             {	1,  12,   0 },
@@ -304,7 +304,7 @@ namespace AdventureCS
             {	8,  63,   0 },
         };
 
-        int[,] Trav005 = new int[9, 3]
+        readonly int[,] Trav005 = new int[9, 3]
         {
             {	4,   9,   0 },
             {	4,  43,   0 },
@@ -317,7 +317,7 @@ namespace AdventureCS
             {	5,  46,   0 },
         };
 
-        int[,] Trav006 = new int[8, 3]
+        readonly int[,] Trav006 = new int[8, 3]
         {
             {	1,   2,   0 },
             {	1,  45,   0 },
@@ -329,7 +329,7 @@ namespace AdventureCS
             {	5,  46,   0 },
         };
 
-        int[,] Trav007 = new int[13, 3]
+        readonly int[,] Trav007 = new int[13, 3]
         {
             {	1,  12,   0 },
             {	4,   4,   0 },
@@ -346,7 +346,7 @@ namespace AdventureCS
             { 595,  30,   0 },
         };
 
-        int[,] Trav008 = new int[12, 3]
+        readonly int[,] Trav008 = new int[12, 3]
         {
             {	5,   6,   0 },
             {	5,  43,   0 },
@@ -362,7 +362,7 @@ namespace AdventureCS
             { 593,   3,   0 },
         };
 
-        int[,] Trav009 = new int[9, 3]
+        readonly int[,] Trav009 = new int[9, 3]
         {
             {	8,  11, 303 },
             {	8,  29, 303 },
@@ -375,7 +375,7 @@ namespace AdventureCS
             {  11,  51,   0 },
         };
 
-        int[,] Trav010 = new int[9, 3]
+        readonly int[,] Trav010 = new int[9, 3]
         {
             {	9,  11,   0 },
             {	9,  20,   0 },
@@ -388,7 +388,7 @@ namespace AdventureCS
             {  14,  31,   0 },
         };
 
-        int[,] Trav011 = new int[13, 3]
+        readonly int[,] Trav011 = new int[13, 3]
         {
             {	8,  63, 303 },
             {	9,  64,   0 },
@@ -405,7 +405,7 @@ namespace AdventureCS
             {  14,  31,   0 },
         };
 
-        int[,] Trav012 = new int[9, 3]
+        readonly int[,] Trav012 = new int[9, 3]
         {
             {	8,  63, 303 },
             {	9,  64,   0 },
@@ -418,7 +418,7 @@ namespace AdventureCS
             {  14,  31,   0 },
         };
 
-        int[,] Trav013 = new int[8, 3]
+        readonly int[,] Trav013 = new int[8, 3]
         {
             {	8,  63, 303 },
             {	9,  64,   0 },
@@ -430,7 +430,7 @@ namespace AdventureCS
             {  14,  44,   0 },
         };
 
-        int[,] Trav014 = new int[11, 3]
+        readonly int[,] Trav014 = new int[11, 3]
         {
             {	8,  63, 303 },
             {	9,  64,   0 },
@@ -445,7 +445,7 @@ namespace AdventureCS
             {  16,  44,   0 },
         };
 
-        int[,] Trav015 = new int[16, 3]
+        readonly int[,] Trav015 = new int[16, 3]
         {
             {  18,  36,   0 },
             {  18,  46,   0 },
@@ -465,12 +465,12 @@ namespace AdventureCS
             {  34,  55,   0 },
         };
 
-        int[,] Trav016 = new int[1, 3]
+        readonly int[,] Trav016 = new int[1, 3]
         {
             {  14,   1,   0 },
         };
 
-        int[,] Trav017 = new int[9, 3]
+        readonly int[,] Trav017 = new int[9, 3]
         {
             {  15,  38,   0 },
             {  15,  43,   0 },
@@ -483,14 +483,14 @@ namespace AdventureCS
             {  27,  41,   0 },
         };
 
-        int[,] Trav018 = new int[3, 3]
+        readonly int[,] Trav018 = new int[3, 3]
         {
             {  15,  38,   0 },
             {  15,  11,   0 },
             {  15,  45,   0 },
         };
 
-        int[,] Trav019 = new int[13, 3]
+        readonly int[,] Trav019 = new int[13, 3]
         {
             {  15,  10,   0 },
             {  15,  29,   0 },
@@ -507,22 +507,22 @@ namespace AdventureCS
             {  74,  66,   0 },
         };
 
-        int[,] Trav020 = new int[1, 3]
+        readonly int[,] Trav020 = new int[1, 3]
         {
             {	0,   1,   0 },
         };
 
-        int[,] Trav021 = new int[1, 3]
+        readonly int[,] Trav021 = new int[1, 3]
         {
             {	0,   1,   0 },
         };
 
-        int[,] Trav022 = new int[1, 3]
+        readonly int[,] Trav022 = new int[1, 3]
         {
             {  15,   1,   0 },
         };
 
-        int[,] Trav023 = new int[7, 3]
+        readonly int[,] Trav023 = new int[7, 3]
         {
             {  67,  43,   0 },
             {  67,  42,   0 },
@@ -533,13 +533,13 @@ namespace AdventureCS
             { 648,  52,   0 },
         };
 
-        int[,] Trav024 = new int[2, 3]
+        readonly int[,] Trav024 = new int[2, 3]
         {
             {  67,  29,   0 },
             {  67,  11,   0 },
         };
 
-        int[,] Trav025 = new int[4, 3]
+        readonly int[,] Trav025 = new int[4, 3]
         {
             {  23,  29,   0 },
             {  23,  11,   0 },
@@ -547,12 +547,12 @@ namespace AdventureCS
             {  26,  56,   0 },
         };
 
-        int[,] Trav026 = new int[1, 3]
+        readonly int[,] Trav026 = new int[1, 3]
         {
             {  88,   1,   0 },
         };
 
-        int[,] Trav027 = new int[9, 3]
+        readonly int[,] Trav027 = new int[9, 3]
         {
             { 596,  39, 312 },
             {  21,   7, 412 },
@@ -565,7 +565,7 @@ namespace AdventureCS
             {  41,  44,   0 },
         };
 
-        int[,] Trav028 = new int[7, 3]
+        readonly int[,] Trav028 = new int[7, 3]
         {
             {  19,  38,   0 },
             {  19,  11,   0 },
@@ -576,14 +576,14 @@ namespace AdventureCS
             {  36,  52,   0 },
         };
 
-        int[,] Trav029 = new int[3, 3]
+        readonly int[,] Trav029 = new int[3, 3]
         {
             {  19,  38,   0 },
             {  19,  11,   0 },
             {  19,  45,   0 },
         };
 
-        int[,] Trav030 = new int[5, 3]
+        readonly int[,] Trav030 = new int[5, 3]
         {
             {  19,  38,   0 },
             {  19,  11,   0 },
@@ -592,18 +592,18 @@ namespace AdventureCS
             {  62,  29,   0 },
         };
 
-        int[,] Trav031 = new int[2, 3]
+        readonly int[,] Trav031 = new int[2, 3]
         {
             {  89,   1, 524 },
             {  90,   1,   0 },
         };
 
-        int[,] Trav032 = new int[1, 3]
+        readonly int[,] Trav032 = new int[1, 3]
         {
             {  19,   1,   0 },
         };
 
-        int[,] Trav033 = new int[8, 3]
+        readonly int[,] Trav033 = new int[8, 3]
         {
             {	3,  65,   0 },
             {  28,  46,   0 },
@@ -615,21 +615,21 @@ namespace AdventureCS
             { 100,  71,   0 },
         };
 
-        int[,] Trav034 = new int[3, 3]
+        readonly int[,] Trav034 = new int[3, 3]
         {
             {  33,  30,   0 },
             {  33,  55,   0 },
             {  15,  29,   0 },
         };
 
-        int[,] Trav035 = new int[3, 3]
+        readonly int[,] Trav035 = new int[3, 3]
         {
             {  33,  43,   0 },
             {  33,  55,   0 },
             {  20,  39,   0 },
         };
 
-        int[,] Trav036 = new int[6, 3]
+        readonly int[,] Trav036 = new int[6, 3]
         {
             {  37,  43,   0 },
             {  37,  17,   0 },
@@ -639,7 +639,7 @@ namespace AdventureCS
             {  65,  70,   0 },
         };
 
-        int[,] Trav037 = new int[5, 3]
+        readonly int[,] Trav037 = new int[5, 3]
         {
             {  36,  44,   0 },
             {  36,  17,   0 },
@@ -648,7 +648,7 @@ namespace AdventureCS
             {  38,  56,   0 },
         };
 
-        int[,] Trav038 = new int[8, 3]
+        readonly int[,] Trav038 = new int[8, 3]
         {
             {  37,  56,   0 },
             {  37,  29,   0 },
@@ -660,7 +660,7 @@ namespace AdventureCS
             { 595,   5,   0 },
         };
 
-        int[,] Trav039 = new int[6, 3]
+        readonly int[,] Trav039 = new int[6, 3]
         {
             {  36,  43,   0 },
             {  36,  23,   0 },
@@ -670,12 +670,12 @@ namespace AdventureCS
             {  65,  70,   0 },
         };
 
-        int[,] Trav040 = new int[1, 3]
+        readonly int[,] Trav040 = new int[1, 3]
         {
             {  41,   1,   0 },
         };
 
-        int[,] Trav041 = new int[8, 3]
+        readonly int[,] Trav041 = new int[8, 3]
         {
             {  42,  46,   0 },
             {  42,  29,   0 },
@@ -687,7 +687,7 @@ namespace AdventureCS
             {  60,  17,   0 },
         };
 
-        int[,] Trav042 = new int[5, 3]
+        readonly int[,] Trav042 = new int[5, 3]
         {
             {  41,  29,   0 },
             {  42,  45,   0 },
@@ -696,14 +696,14 @@ namespace AdventureCS
             {  80,  44,   0 },
         };
 
-        int[,] Trav043 = new int[3, 3]
+        readonly int[,] Trav043 = new int[3, 3]
         {
             {  42,  44,   0 },
             {  44,  46,   0 },
             {  45,  43,   0 },
         };
 
-        int[,] Trav044 = new int[4, 3]
+        readonly int[,] Trav044 = new int[4, 3]
         {
             {  43,  43,   0 },
             {  48,  30,   0 },
@@ -711,7 +711,7 @@ namespace AdventureCS
             {  82,  45,   0 },
         };
 
-        int[,] Trav045 = new int[6, 3]
+        readonly int[,] Trav045 = new int[6, 3]
         {
             {  42,  44,   0 },
             {  43,  45,   0 },
@@ -721,31 +721,31 @@ namespace AdventureCS
             {  87,  30,   0 },
         };
 
-        int[,] Trav046 = new int[2, 3]
+        readonly int[,] Trav046 = new int[2, 3]
         {
             {  45,  44,   0 },
             {  45,  11,   0 },
         };
 
-        int[,] Trav047 = new int[2, 3]
+        readonly int[,] Trav047 = new int[2, 3]
         {
             {  45,  43,   0 },
             {  45,  11,   0 },
         };
 
-        int[,] Trav048 = new int[2, 3]
+        readonly int[,] Trav048 = new int[2, 3]
         {
             {  44,  29,   0 },
             {  44,  11,   0 },
         };
 
-        int[,] Trav049 = new int[2, 3]
+        readonly int[,] Trav049 = new int[2, 3]
         {
             {  50,  43,   0 },
             {  51,  44,   0 },
         };
 
-        int[,] Trav050 = new int[4, 3]
+        readonly int[,] Trav050 = new int[4, 3]
         {
             {  44,  43,   0 },
             {  49,  44,   0 },
@@ -753,7 +753,7 @@ namespace AdventureCS
             {  52,  46,   0 },
         };
 
-        int[,] Trav051 = new int[4, 3]
+        readonly int[,] Trav051 = new int[4, 3]
         {
             {  49,  44,   0 },
             {  50,  29,   0 },
@@ -761,7 +761,7 @@ namespace AdventureCS
             {  53,  46,   0 },
         };
 
-        int[,] Trav052 = new int[6, 3]
+        readonly int[,] Trav052 = new int[6, 3]
         {
             {  50,  44,   0 },
             {  51,  43,   0 },
@@ -771,20 +771,20 @@ namespace AdventureCS
             {  86,  30,   0 },
         };
 
-        int[,] Trav053 = new int[3, 3]
+        readonly int[,] Trav053 = new int[3, 3]
         {
             {  51,  44,   0 },
             {  52,  45,   0 },
             {  54,  46,   0 },
         };
 
-        int[,] Trav054 = new int[2, 3]
+        readonly int[,] Trav054 = new int[2, 3]
         {
             {  53,  44,   0 },
             {  53,  11,   0 },
         };
 
-        int[,] Trav055 = new int[4, 3]
+        readonly int[,] Trav055 = new int[4, 3]
         {
             {  52,  44,   0 },
             {  55,  45,   0 },
@@ -792,13 +792,13 @@ namespace AdventureCS
             {  57,  43,   0 },
         };
 
-        int[,] Trav056 = new int[2, 3]
+        readonly int[,] Trav056 = new int[2, 3]
         {
             {  55,  29,   0 },
             {  55,  11,   0 },
         };
 
-        int[,] Trav057 = new int[6, 3]
+        readonly int[,] Trav057 = new int[6, 3]
         {
             {  13,  30,   0 },
             {  13,  56,   0 },
@@ -808,18 +808,18 @@ namespace AdventureCS
             {  84,  43,   0 },
         };
 
-        int[,] Trav058 = new int[2, 3]
+        readonly int[,] Trav058 = new int[2, 3]
         {
             {  57,  43,   0 },
             {  57,  11,   0 },
         };
 
-        int[,] Trav059 = new int[1, 3]
+        readonly int[,] Trav059 = new int[1, 3]
         {
             {  27,   1,   0 },
         };
 
-        int[,] Trav060 = new int[7, 3]
+        readonly int[,] Trav060 = new int[7, 3]
         {
             {  41,  43,   0 },
             {  41,  29,   0 },
@@ -830,14 +830,14 @@ namespace AdventureCS
             {  62,  52,   0 },
         };
 
-        int[,] Trav061 = new int[3, 3]
+        readonly int[,] Trav061 = new int[3, 3]
         {
             {  60,  43,   0 },
             {  62,  45,   0 },
             { 107,  46, 100 },
         };
 
-        int[,] Trav062 = new int[4, 3]
+        readonly int[,] Trav062 = new int[4, 3]
         {
             {  60,  44,   0 },
             {  63,  45,   0 },
@@ -845,13 +845,13 @@ namespace AdventureCS
             {  61,  46,   0 },
         };
 
-        int[,] Trav063 = new int[2, 3]
+        readonly int[,] Trav063 = new int[2, 3]
         {
             {  62,  46,   0 },
             {  62,  11,   0 },
         };
 
-        int[,] Trav064 = new int[8, 3]
+        readonly int[,] Trav064 = new int[8, 3]
         {
             {  39,  29,   0 },
             {  39,  56,   0 },
@@ -863,7 +863,7 @@ namespace AdventureCS
             { 106,  43,   0 },
         };
 
-        int[,] Trav065 = new int[12, 3]
+        readonly int[,] Trav065 = new int[12, 3]
         {
             {  64,  43,   0 },
             {  66,  44,   0 },
@@ -879,7 +879,7 @@ namespace AdventureCS
             { 106,  30,   0 },
         };
 
-        int[,] Trav066 = new int[7, 3]
+        readonly int[,] Trav066 = new int[7, 3]
         {
             {  65,  47,   0 },
             {  67,  44,   0 },
@@ -890,7 +890,7 @@ namespace AdventureCS
             {  97,  72,   0 },
         };
 
-        int[,] Trav067 = new int[5, 3]
+        readonly int[,] Trav067 = new int[5, 3]
         {
             {  66,  43,   0 },
             {  23,  44,   0 },
@@ -899,7 +899,7 @@ namespace AdventureCS
             {  24,  31,   0 },
         };
 
-        int[,] Trav068 = new int[4, 3]
+        readonly int[,] Trav068 = new int[4, 3]
         {
             {  23,  46,   0 },
             {  69,  29,   0 },
@@ -907,7 +907,7 @@ namespace AdventureCS
             {  65,  45,   0 },
         };
 
-        int[,] Trav069 = new int[6, 3]
+        readonly int[,] Trav069 = new int[6, 3]
         {
             {  68,  30,   0 },
             {  68,  61,   0 },
@@ -917,7 +917,7 @@ namespace AdventureCS
             { 113,  75,   0 },
         };
 
-        int[,] Trav070 = new int[4, 3]
+        readonly int[,] Trav070 = new int[4, 3]
         {
             {  71,  45,   0 },
             {  65,  30,   0 },
@@ -925,14 +925,14 @@ namespace AdventureCS
             { 111,  46,   0 },
         };
 
-        int[,] Trav071 = new int[3, 3]
+        readonly int[,] Trav071 = new int[3, 3]
         {
             {  65,  48,   0 },
             {  70,  46,   0 },
             { 110,  45,   0 },
         };
 
-        int[,] Trav072 = new int[5, 3]
+        readonly int[,] Trav072 = new int[5, 3]
         {
             {  65,  70,   0 },
             { 118,  49,   0 },
@@ -941,14 +941,14 @@ namespace AdventureCS
             {  97,  72,   0 },
         };
 
-        int[,] Trav073 = new int[3, 3]
+        readonly int[,] Trav073 = new int[3, 3]
         {
             {  72,  46,   0 },
             {  72,  17,   0 },
             {  72,  11,   0 },
         };
 
-        int[,] Trav074 = new int[4, 3]
+        readonly int[,] Trav074 = new int[4, 3]
         {
             {  19,  43,   0 },
             { 120,  44, 331 },
@@ -956,18 +956,18 @@ namespace AdventureCS
             {  75,  30,   0 },
         };
 
-        int[,] Trav075 = new int[2, 3]
+        readonly int[,] Trav075 = new int[2, 3]
         {
             {  76,  46,   0 },
             {  77,  45,   0 },
         };
 
-        int[,] Trav076 = new int[1, 3]
+        readonly int[,] Trav076 = new int[1, 3]
         {
             {  75,  45,   0 },
         };
 
-        int[,] Trav077 = new int[4, 3]
+        readonly int[,] Trav077 = new int[4, 3]
         {
             {  75,  43,   0 },
             {  78,  44,   0 },
@@ -975,17 +975,17 @@ namespace AdventureCS
             {  66,  17,   0 },
         };
 
-        int[,] Trav078 = new int[1, 3]
+        readonly int[,] Trav078 = new int[1, 3]
         {
             {  77,  46,   0 },
         };
 
-        int[,] Trav079 = new int[1, 3]
+        readonly int[,] Trav079 = new int[1, 3]
         {
             {	3,   1,   0 },
         };
 
-        int[,] Trav080 = new int[4, 3]
+        readonly int[,] Trav080 = new int[4, 3]
         {
             {  42,  45,   0 },
             {  80,  44,   0 },
@@ -993,51 +993,51 @@ namespace AdventureCS
             {  81,  43,   0 },
         };
 
-        int[,] Trav081 = new int[2, 3]
+        readonly int[,] Trav081 = new int[2, 3]
         {
             {  80,  44,   0 },
             {  80,  11,   0 },
         };
 
-        int[,] Trav082 = new int[2, 3]
+        readonly int[,] Trav082 = new int[2, 3]
         {
             {  44,  46,   0 },
             {  44,  11,   0 },
         };
 
-        int[,] Trav083 = new int[3, 3]
+        readonly int[,] Trav083 = new int[3, 3]
         {
             {  57,  46,   0 },
             {  84,  43,   0 },
             {  85,  44,   0 },
         };
 
-        int[,] Trav084 = new int[3, 3]
+        readonly int[,] Trav084 = new int[3, 3]
         {
             {  57,  45,   0 },
             {  83,  44,   0 },
             { 114,  50,   0 },
         };
 
-        int[,] Trav085 = new int[2, 3]
+        readonly int[,] Trav085 = new int[2, 3]
         {
             {  83,  43,   0 },
             {  83,  11,   0 },
         };
 
-        int[,] Trav086 = new int[2, 3]
+        readonly int[,] Trav086 = new int[2, 3]
         {
             {  52,  29,   0 },
             {  52,  11,   0 },
         };
 
-        int[,] Trav087 = new int[2, 3]
+        readonly int[,] Trav087 = new int[2, 3]
         {
             {  45,  29,   0 },
             {  45,  30,   0 },
         };
 
-        int[,] Trav088 = new int[6, 3]
+        readonly int[,] Trav088 = new int[6, 3]
         {
             {  25,  30,   0 },
             {  25,  56,   0 },
@@ -1047,17 +1047,17 @@ namespace AdventureCS
             {  92,  27,   0 },
         };
 
-        int[,] Trav089 = new int[1, 3]
+        readonly int[,] Trav089 = new int[1, 3]
         {
             {  25,  1,	 0 },
         };
 
-        int[,] Trav090 = new int[1, 3]
+        readonly int[,] Trav090 = new int[1, 3]
         {
             {  23,   1,   0 },
         };
 
-        int[,] Trav091 = new int[5, 3]
+        readonly int[,] Trav091 = new int[5, 3]
         {
             {  95,  45,   0 },
             {  95,  73,   0 },
@@ -1066,21 +1066,21 @@ namespace AdventureCS
             {  72,  56,   0 },
         };
 
-        int[,] Trav092 = new int[3, 3]
+        readonly int[,] Trav092 = new int[3, 3]
         {
             {  88,  46,   0 },
             {  93,  43,   0 },
             {  94,  45,   0 },
         };
 
-        int[,] Trav093 = new int[3, 3]
+        readonly int[,] Trav093 = new int[3, 3]
         {
             {  92,  46,   0 },
             {  92,  27,   0 },
             {  92,  11,   0 },
         };
 
-        int[,] Trav094 = new int[7, 3]
+        readonly int[,] Trav094 = new int[7, 3]
         {
             {  92,  46,   0 },
             {  92,  27,   0 },
@@ -1091,7 +1091,7 @@ namespace AdventureCS
             { 611,  45,   0 },
         };
 
-        int[,] Trav095 = new int[4, 3]
+        readonly int[,] Trav095 = new int[4, 3]
         {
             {  94,  46,   0 },
             {  94,  11,   0 },
@@ -1099,13 +1099,13 @@ namespace AdventureCS
             {  91,  44,   0 },
         };
 
-        int[,] Trav096 = new int[2, 3]
+        readonly int[,] Trav096 = new int[2, 3]
         {
             {  66,  44,   0 },
             {  66,  11,   0 },
         };
 
-        int[,] Trav097 = new int[6, 3]
+        readonly int[,] Trav097 = new int[6, 3]
         {
             {  66,  48,   0 },
             {  72,  44,   0 },
@@ -1115,14 +1115,14 @@ namespace AdventureCS
             {  98,  73,   0 },
         };
 
-        int[,] Trav098 = new int[3, 3]
+        readonly int[,] Trav098 = new int[3, 3]
         {
             {  97,  46,   0 },
             {  97,  72,   0 },
             {  99,  44,   0 },
         };
 
-        int[,] Trav099 = new int[5, 3]
+        readonly int[,] Trav099 = new int[5, 3]
         {
             {  98,  50,   0 },
             {  98,  73,   0 },
@@ -1131,7 +1131,7 @@ namespace AdventureCS
             {  100, 43,   0 },
         };
 
-        int[,] Trav100 = new int[8, 3]
+        readonly int[,] Trav100 = new int[8, 3]
         {
             { 301,  44,   0 },
             { 301,  23,   0 },
@@ -1143,21 +1143,21 @@ namespace AdventureCS
             { 101,  22,   0 },
         };
 
-        int[,] Trav101 = new int[3, 3]
+        readonly int[,] Trav101 = new int[3, 3]
         {
             { 100,  46,   0 },
             { 100,  71,   0 },
             { 100,  11,   0 },
         };
 
-        int[,] Trav102 = new int[3, 3]
+        readonly int[,] Trav102 = new int[3, 3]
         {
             { 103,  30,   0 },
             { 103,  74,   0 },
             { 103,  11,   0 },
         };
 
-        int[,] Trav103 = new int[6, 3]
+        readonly int[,] Trav103 = new int[6, 3]
         {
             { 102,  29,   0 },
             { 102,  38,   0 },
@@ -1167,28 +1167,28 @@ namespace AdventureCS
             {  64,  46,   0 },
         };
 
-        int[,] Trav104 = new int[3, 3]
+        readonly int[,] Trav104 = new int[3, 3]
         {
             { 103,  29,   0 },
             { 103,  74,   0 },
             { 105,  30,   0 },
         };
 
-        int[,] Trav105 = new int[3, 3]
+        readonly int[,] Trav105 = new int[3, 3]
         {
             { 104,  29,   0 },
             { 104,  11,   0 },
             { 103,  74,   0 },
         };
 
-        int[,] Trav106 = new int[3, 3]
+        readonly int[,] Trav106 = new int[3, 3]
         {
             {  64,  29,   0 },
             {  65,  44,   0 },
             { 108,  43,   0 },
         };
 
-        int[,] Trav107 = new int[10, 3]
+        readonly int[,] Trav107 = new int[10, 3]
         {
             { 131,  46,   0 },
             { 132,  49,   0 },
@@ -1202,7 +1202,7 @@ namespace AdventureCS
             {  61,  30,   0 },
         };
 
-        int[,] Trav108 = new int[11, 3]
+        readonly int[,] Trav108 = new int[11, 3]
         {
             { 556,  43,  95 },
             { 556,  45,  95 },
@@ -1217,20 +1217,20 @@ namespace AdventureCS
             { 626,  44,   0 },
         };
 
-        int[,] Trav109 = new int[3, 3]
+        readonly int[,] Trav109 = new int[3, 3]
         {
             {  69,  46,   0 },
             { 113,  45,   0 },
             { 113,  75,   0 },
         };
 
-        int[,] Trav110 = new int[2, 3]
+        readonly int[,] Trav110 = new int[2, 3]
         {
             {  71,  44,   0 },
             {  20,  39,   0 },
         };
 
-        int[,] Trav111 = new int[6, 3]
+        readonly int[,] Trav111 = new int[6, 3]
         {
             {  70,  45,   0 },
             {  50,  30,  40 },
@@ -1240,7 +1240,7 @@ namespace AdventureCS
             {  45,  30,   0 },
         };
 
-        int[,] Trav112 = new int[10, 3]
+        readonly int[,] Trav112 = new int[10, 3]
         {
             { 131,  49,   0 },
             { 132,  45,   0 },
@@ -1254,30 +1254,30 @@ namespace AdventureCS
             { 140,  46,   0 },
         };
 
-        int[,] Trav113 = new int[3, 3]
+        readonly int[,] Trav113 = new int[3, 3]
         {
             { 109,  46,   0 },
             { 109,  11,   0 },
             { 109, 109,   0 },
         };
 
-        int[,] Trav114 = new int[1, 3]
+        readonly int[,] Trav114 = new int[1, 3]
         {
             {  84,  48,   0 },
         };
 
-        int[,] Trav115 = new int[1, 3]
+        readonly int[,] Trav115 = new int[1, 3]
         {
             { 116,  49,   0 },
         };
 
-        int[,] Trav116 = new int[2, 3]
+        readonly int[,] Trav116 = new int[2, 3]
         {
             { 115,  47,   0 },
             { 593,  30,   0 },
         };
 
-        int[,] Trav117 = new int[9, 3]
+        readonly int[,] Trav117 = new int[9, 3]
         {
             { 118,  49,   0 },
             { 660,  41, 233 },
@@ -1290,13 +1290,13 @@ namespace AdventureCS
             { 596,  39,   0 },
         };
 
-        int[,] Trav118 = new int[2, 3]
+        readonly int[,] Trav118 = new int[2, 3]
         {
             {  72,  30,   0 },
             { 117,  29,   0 },
         };
 
-        int[,] Trav119 = new int[4, 3]
+        readonly int[,] Trav119 = new int[4, 3]
         {
             {  69,  45,   0 },
             {  69,  11,   0 },
@@ -1304,13 +1304,13 @@ namespace AdventureCS
             { 653,   7,   0 },
         };
 
-        int[,] Trav120 = new int[2, 3]
+        readonly int[,] Trav120 = new int[2, 3]
         {
             {  69,  45,   0 },
             {  74,  43,   0 },
         };
 
-        int[,] Trav121 = new int[4, 3]
+        readonly int[,] Trav121 = new int[4, 3]
         {
             {  74,  43,   0 },
             {  74,  11,   0 },
@@ -1318,7 +1318,7 @@ namespace AdventureCS
             { 653,   7,   0 },
         };
 
-        int[,] Trav122 = new int[10, 3]
+        readonly int[,] Trav122 = new int[10, 3]
         {
             { 123,  47,   0 },
             { 660,  41, 233 },
@@ -1332,7 +1332,7 @@ namespace AdventureCS
             { 129,  40,   0 },
         };
 
-        int[,] Trav123 = new int[5, 3]
+        readonly int[,] Trav123 = new int[5, 3]
         {
             { 122,  44,   0 },
             { 124,  43,   0 },
@@ -1341,7 +1341,7 @@ namespace AdventureCS
             { 129,  40,   0 },
         };
 
-        int[,] Trav124 = new int[8, 3]
+        readonly int[,] Trav124 = new int[8, 3]
         {
             { 123,  44,   0 },
             { 125,  47,   0 },
@@ -1353,7 +1353,7 @@ namespace AdventureCS
             { 129,  40,   0 },
         };
 
-        int[,] Trav125 = new int[6, 3]
+        readonly int[,] Trav125 = new int[6, 3]
         {
             { 124,  46,   0 },
             { 124,  77,   0 },
@@ -1363,7 +1363,7 @@ namespace AdventureCS
             { 127,  17,   0 },
         };
 
-        int[,] Trav126 = new int[6, 3]
+        readonly int[,] Trav126 = new int[6, 3]
         {
             { 125,  46,   0 },
             { 125,  23,   0 },
@@ -1373,7 +1373,7 @@ namespace AdventureCS
             { 610,  39,   0 },
         };
 
-        int[,] Trav127 = new int[5, 3]
+        readonly int[,] Trav127 = new int[5, 3]
         {
             { 125,  44,   0 },
             { 125,  11,   0 },
@@ -1382,7 +1382,7 @@ namespace AdventureCS
             { 126,  28,   0 },
         };
 
-        int[,] Trav128 = new int[7, 3]
+        readonly int[,] Trav128 = new int[7, 3]
         {
             { 124,  45,   0 },
             { 124,  29,   0 },
@@ -1393,7 +1393,7 @@ namespace AdventureCS
             { 126,  28,   0 },
         };
 
-        int[,] Trav129 = new int[8, 3]
+        readonly int[,] Trav129 = new int[8, 3]
         {
             { 128,  44,   0 },
             { 128,  29,   0 },
@@ -1405,14 +1405,14 @@ namespace AdventureCS
             { 126,  28,   0 },
         };
 
-        int[,] Trav130 = new int[3, 3]
+        readonly int[,] Trav130 = new int[3, 3]
         {
             { 129,  44,   0 },
             { 124,  77,   0 },
             { 126,  28,   0 },
         };
 
-        int[,] Trav131 = new int[10, 3]
+        readonly int[,] Trav131 = new int[10, 3]
         {
             { 107,  44,   0 },
             { 132,  48,   0 },
@@ -1426,7 +1426,7 @@ namespace AdventureCS
             { 112,  43,   0 },
         };
 
-        int[,] Trav132 = new int[10, 3]
+        readonly int[,] Trav132 = new int[10, 3]
         {
             { 107,  50,   0 },
             { 131,  29,   0 },
@@ -1440,7 +1440,7 @@ namespace AdventureCS
             { 112,  48,   0 },
         };
 
-        int[,] Trav133 = new int[10, 3]
+        readonly int[,] Trav133 = new int[10, 3]
         {
             { 107,  29,   0 },
             { 131,  30,   0 },
@@ -1454,7 +1454,7 @@ namespace AdventureCS
             { 112,  46,   0 },
         };
 
-        int[,] Trav134 = new int[10, 3]
+        readonly int[,] Trav134 = new int[10, 3]
         {
             { 107,  47,   0 },
             { 131,  45,   0 },
@@ -1468,7 +1468,7 @@ namespace AdventureCS
             { 112,  49,   0 },
         };
 
-        int[,] Trav135 = new int[10, 3]
+        readonly int[,] Trav135 = new int[10, 3]
         {
             { 107,  45,   0 },
             { 131,  48,   0 },
@@ -1482,7 +1482,7 @@ namespace AdventureCS
             { 112,  29,   0 },
         };
 
-        int[,] Trav136 = new int[10, 3]
+        readonly int[,] Trav136 = new int[10, 3]
         {
             { 107,  43,   0 },
             { 131,  44,   0 },
@@ -1496,7 +1496,7 @@ namespace AdventureCS
             { 112,  45,   0 },
         };
 
-        int[,] Trav137 = new int[10, 3]
+        readonly int[,] Trav137 = new int[10, 3]
         {
             { 107,  48,   0 },
             { 131,  47,   0 },
@@ -1510,7 +1510,7 @@ namespace AdventureCS
             { 112,  44,   0 },
         };
 
-        int[,] Trav138 = new int[10, 3]
+        readonly int[,] Trav138 = new int[10, 3]
         {
             { 107,  30,   0 },
             { 131,  43,   0 },
@@ -1524,7 +1524,7 @@ namespace AdventureCS
             { 112,  50,   0 },
         };
 
-        int[,] Trav139 = new int[10, 3]
+        readonly int[,] Trav139 = new int[10, 3]
         {
             { 107,  49,   0 },
             { 131,  50,   0 },
@@ -1538,7 +1538,7 @@ namespace AdventureCS
             { 112,  47,   0 },
         };
 
-        int[,] Trav140 = new int[2, 3]
+        readonly int[,] Trav140 = new int[2, 3]
         {
             { 112,  45,   0 },
             { 112,  11,   0 },
@@ -1688,7 +1688,7 @@ namespace AdventureCS
         #endregion
 
         #region Serialization Routines
-        public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Condition", this.Condition);
             info.AddValue("Place", this.Place);
@@ -1958,12 +1958,15 @@ namespace AdventureCS
                 set { aData.sTravCnt = value; }
             }
 
-            //public class VOCABTAB
-            //{
-            //    public int key = 0;             // sWord
-            //    public string pWord = 0;        //char* pWord;
-            //};
+        //public class VOCABTAB
 
+#pragma warning disable S125
+        // Sections of code should not be commented out
+        //{
+        //    public int key = 0;             // sWord
+        //    public string pWord = 0;        //char* pWord;
+        //};
+#pragma warning restore S125 // Sections of code should not be commented out
 
             int nVocabCount = 0;
             private string word1;
