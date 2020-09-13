@@ -26,9 +26,9 @@ steps:
     SonarCloud: 'SonarCloudSWD'
     organization: 'swd'
     scannerMode: 'MSBuild'
-    projectKey: 'swd'
+    projectKey: 'Adventure'
     projectName: 'Adventure'
-
+    
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
