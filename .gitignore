@@ -1,7 +1,6 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+#
+.vs/
+*/bin/
+*/obj/
 
-/.vs/Adventure/v15/Server/sqlite3
-/Adventure/obj/Debug
-/.vs/Adventure/v15/.suo
+
