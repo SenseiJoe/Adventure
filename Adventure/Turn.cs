@@ -93,7 +93,7 @@ namespace AdventureCS
 			if (true == Debug)
 				Console.WriteLine("Your current location is %d\n", Location);
 
-			while (!english()) {
+			while (!English()) {
 				Console.WriteLine('>');
 			} ;
 

@@ -45,22 +45,18 @@ namespace AdventureCS
 	            case KILL:
 	                ivkill();
 	                break;
-            #if defined
-	            case EAT:
-	                iveat();
+	            case EAT:           // was commented out
+	                ivEat();
 	                break;
-            #endif
 	            case DRINK:
 	                ivDrink();
 	                break;
 	            case QUIT:
 	                ivQuit();
 	                break;
-            #if defined
-	            case FILL:
+	            case FILL:          // was commented out
 	                ivFill();
-	                 break;
-            #endif
+	                break;
 	            case BLAST:
                     vBlast();
 	                break;
@@ -96,16 +92,13 @@ namespace AdventureCS
                     break;
             }
 
-            return;            
-
         }
 
         private void ivTake()
         {
             int	anobj =0;
-            int item = 1;
 
-            for (item = 1; item < MAXOBJ; ++item) {
+            for (int item = 1; item < MAXOBJ; ++item) {
                 if (Place[item] == Location) {
 	                if (anobj != 0) {
 		                NeedObj();
@@ -122,7 +115,6 @@ namespace AdventureCS
 
             aeobject = anobj;
             vTake();
-            return;            
         }
 
         private void ivOpen()
@@ -152,7 +144,6 @@ namespace AdventureCS
 	            return;
             }
             vOpen();
-            return;            
         }
 
         private void ivkill()
@@ -195,19 +186,16 @@ namespace AdventureCS
 	            return;
             }
             vKill();
-            return;            
         }
 
-        private void iveat()
+        private void ivEat()
         {
             if(!IsHere(FOOD))
-               NeedObj();
+                NeedObj();
             else {
-	            aeobject = FOOD;
+                aeobject = FOOD;
                 vEat();
             }
-
-            return;
         }
 
         private void ivDrink()
@@ -218,8 +206,6 @@ namespace AdventureCS
 	            aeobject = WATER;
                 vDrink();
             }
-
-            return;            
         }
         /*
             QUIT
@@ -229,20 +215,16 @@ namespace AdventureCS
             m_bGaveUp = ReadInputLine(22, 54, 54);
             if (true == m_bGaveUp)
 	            normend();
-
-            return;
         }
 
         private void ivFill()
         {
-            if (!IsHere(BOTTLE))
-	            NeedObj();
+            if(!IsHere(BOTTLE))
+                NeedObj();
             else {
-	            aeobject=BOTTLE;
+                aeobject = BOTTLE;
                 vFill();
             }
-
-            return;            
         }
 
         private void ivfoo()
@@ -280,31 +262,27 @@ namespace AdventureCS
 
             Move(EGGS, 92);
             pspeak(EGGS, k);
-            
-            return;
         }
 
-        private void ivread()
-        {
+        //private void ivRead()
+        //{
 
-            if (IsHere(MAGAZINE))
-	            aeobject = MAGAZINE;
+        //    if(IsHere(MAGAZINE))
+        //        aeobject = MAGAZINE;
 
-            if (IsHere(TABLET))
-	            aeobject = aeobject * 100 + TABLET;
+        //    if(IsHere(TABLET))
+        //        aeobject = aeobject * 100 + TABLET;
 
-            if (IsHere(MESSAGE))
-	            aeobject = aeobject*100 + MESSAGE;
+        //    if(IsHere(MESSAGE))
+        //        aeobject = aeobject * 100 + MESSAGE;
 
-            if (aeobject > 100 || aeobject == 0 || IsDark()) {
-	            NeedObj();
-	            return;
-            }
+        //    if(aeobject > 100 || aeobject == 0 || IsDark()) {
+        //        NeedObj();
+        //        return;
+        //    }
 
-            vRead();
-            return;
-            
-        }
+        //    vRead();
+        //}
 
         private void inventory()
         {
@@ -325,7 +303,6 @@ namespace AdventureCS
             if (msg > 0)
 	            rspeak(msg);
 
-            return;            
         }
 
         private void addobj(int obj)
@@ -339,10 +316,6 @@ namespace AdventureCS
             }
 
             aeobject = obj;
-            return;            
-
         }
-
     }
-
 }

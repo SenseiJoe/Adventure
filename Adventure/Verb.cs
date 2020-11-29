@@ -192,8 +192,6 @@ namespace AdventureCS
 			if (aeobject == BOTTLE && i != 0)
 				Place[i] = -1;
 			rspeak(54);
-
-			return;
 		}
 
 /*
@@ -207,10 +205,9 @@ namespace AdventureCS
 			if (toting(ROD2) && aeobject == ROD && !toting(ROD))
 				aeobject = ROD2;
 
-			if (!toting(aeobject))
-			{
-			vActionMsg(Verb);
-			return;
+			if (!toting(aeobject)) {
+			    vActionMsg(Verb);
+			    return;
 			}
 
 			/* snake and bird */
@@ -223,24 +220,23 @@ namespace AdventureCS
 				Property[SNAKE] = -1;
 			}
 			else {			/* coins and vending machine */
-			if (aeobject == COINS && IsHere(VEND)) {
-				dstroy(COINS);
-				drop(BATTERIES, Location);
-				pspeak(BATTERIES, 0);
-				return;
-			}
-			else			/* bird and dragon (ouch!!) */
-			{
-				if (aeobject == BIRD && at(DRAGON) && Property[DRAGON] == 0) {
-					rspeak(154);
-					dstroy(BIRD);
-					Property[BIRD] = 0;
-					if (Place[SNAKE] != 0)
-						++Tally2;
-					return;
-				}
-			}
-			}
+			    if (aeobject == COINS && IsHere(VEND)) {
+				    dstroy(COINS);
+				    drop(BATTERIES, Location);
+				    pspeak(BATTERIES, 0);
+				    return;
+			    }
+			    else {	/* bird and dragon (ouch!!) */
+				    if (aeobject == BIRD && at(DRAGON) && Property[DRAGON] == 0) {
+					    rspeak(154);
+					    dstroy(BIRD);
+					    Property[BIRD] = 0;
+					    if (Place[SNAKE] != 0)
+						    ++Tally2;
+					    return;
+				    }
+			    }
+		    }
 
 			/* Bear and troll */
 			if (aeobject == BEAR && at(TROLL)) {
@@ -280,8 +276,6 @@ namespace AdventureCS
 				Property[BIRD] = 0;
 
 			drop(aeobject, Location);
-
-			return;
 		}
 
 		/*
@@ -295,22 +289,25 @@ namespace AdventureCS
 				case CLAM:
 				case OYSTER:
 					oyclam = (aeobject == OYSTER ? 1 : 0);
-					if (Verb == LOCK)
-						msg = 61;
-					else {
-						if (!toting(TRIDENT))
-							msg = 122 + oyclam;
-						else {
-							if (toting(aeobject))
-								msg = 120 + oyclam;
-							else {
-								msg = 124 + oyclam;
-								dstroy(CLAM);
-								drop(OYSTER, Location);
-								drop(PEARL, 105);
-							}
-						}
-					}
+                    if(Verb == LOCK) {
+                        msg = 61;
+                    }
+                    else {
+                        if(!toting(TRIDENT)) {
+                            msg = 122 + oyclam;
+                        }
+                        else {
+                            if(toting(aeobject)) {
+                                msg = 120 + oyclam;
+                            }
+                            else {
+                                msg = 124 + oyclam;
+                                dstroy(CLAM);
+                                drop(OYSTER, Location);
+                                drop(PEARL, 105);
+                            }
+                        }
+                    }
 					break;
 				case DOOR:
 					msg = (Property[DOOR] == 1 ? 54 : 111);
@@ -322,40 +319,41 @@ namespace AdventureCS
 					msg = 55;
 					break;
 				case CHAIN:
-					if (!IsHere(KEYS))
-						msg = 31;
-					else {
-						if (Verb == LOCK) {
-							if (Property[CHAIN] != 0)
-								msg = 34;
-							else
-								if (Location != 130)
-								msg = 173;
-							else {
-								Property[CHAIN] = 2;
-								if (toting(CHAIN))
-									drop(CHAIN, Location);
-								FixedLocation[CHAIN] = -1;
-								msg = 172;
-							}
-						}
-						else {
-							if (Property[BEAR] == 0)
-								msg = 41;
-							else {
-								if (Property[CHAIN] == 0)
-									msg = 37;
-								else {
-									Property[CHAIN] = 0;
-									FixedLocation[CHAIN] = 0;
-									if (Property[BEAR] != 3)
-										Property[BEAR] = 2;
-									FixedLocation[BEAR] = 2 - Property[BEAR];
-									msg = 171;
-								}
-							}
-						}
-					}
+                    if(!IsHere(KEYS)) {
+                        msg = 31;
+                    }
+                    else {
+                        if(Verb == LOCK) {
+                            if(Property[CHAIN] != 0)
+                                msg = 34;
+                            else
+                                if(Location != 130)
+                                    msg = 173;
+                            else {
+                                Property[CHAIN] = 2;
+                                if(toting(CHAIN))
+                                    drop(CHAIN, Location);
+                                FixedLocation[CHAIN] = -1;
+                                msg = 172;
+                            }
+                        }
+                        else {
+                            if(Property[BEAR] == 0)
+                                msg = 41;
+                            else {
+                                if(Property[CHAIN] == 0)
+                                    msg = 37;
+                                else {
+                                    Property[CHAIN] = 0;
+                                    FixedLocation[CHAIN] = 0;
+                                    if(Property[BEAR] != 3)
+                                        Property[BEAR] = 2;
+                                    FixedLocation[BEAR] = 2 - Property[BEAR];
+                                    msg = 171;
+                                }
+                            }
+                        }
+                    }
 					break;
 				case GRATE:
 					if (!IsHere(KEYS))
@@ -380,19 +378,17 @@ namespace AdventureCS
 					break;
 			}
 			rspeak(msg);
-			return;
 		}
 
-		/*
+        /*
 				SAY etc.
 		*/
-		void vSay()
-		{
-			int wtype = 0, wval = 0;
+        void vSay()
+        {
+            int wtype = 0, wval = 0;
 
-			AnalyzeWord(word1, ref wtype, ref wval);
-			Console.WriteLine("Okay.\n%s\n", wval == SAY ? word2 : word1);
-			return;
+            AnalyzeWord(word1, ref wtype, ref wval);
+            Console.WriteLine($"Okay.\n{(wval == SAY ? word2 : word1)}\n" );
 		}
 
 		/*
@@ -415,8 +411,6 @@ namespace AdventureCS
 					}
 				}
 			}
-
-			return;
 		}
 
 		/*
@@ -424,14 +418,13 @@ namespace AdventureCS
 		*/
 		void vOff()
 		{
-			if (!IsHere(LAMP))
-				vActionMsg(Verb);
-			else {
-				Property[LAMP] = 0;
-				rspeak(40);
-			}
-
-			return;
+            if(!IsHere(LAMP)) {
+                vActionMsg(Verb);
+            }
+            else {
+                Property[LAMP] = 0;
+                rspeak(40);
+            }
 		}
 
 		/*
@@ -439,16 +432,18 @@ namespace AdventureCS
 		*/
 		void vWave()
 		{
-			if (!toting(aeobject) && (aeobject != ROD || !toting(ROD2)))
-				rspeak(29);
-			else {
-				if (aeobject != ROD || !at(FISSURE) || !toting(aeobject) || bClosing)
-					vActionMsg(Verb);
-				else {
-					Property[FISSURE] = 1 - Property[FISSURE];
-					pspeak(FISSURE, 2 - Property[FISSURE]);
-				}
-			}
+            if(!toting(aeobject) && (aeobject != ROD || !toting(ROD2))) {
+                rspeak(29);
+            }
+            else {
+                if(aeobject != ROD || !at(FISSURE) || !toting(aeobject) || bClosing) {
+                    vActionMsg(Verb);
+                }
+                else {
+                    Property[FISSURE] = 1 - Property[FISSURE];
+                    pspeak(FISSURE, 2 - Property[FISSURE]);
+                }
+            }
 		}
 
 		/*
@@ -563,8 +558,6 @@ namespace AdventureCS
 				else
 					rspeak(77);
 			}
-
-			return;
 		}
 
 		/*
@@ -594,7 +587,6 @@ namespace AdventureCS
 					return;
 			}
 			rspeak(msg);
-			return;
 		}
 
 		/*
@@ -613,8 +605,6 @@ namespace AdventureCS
 					rspeak(74);
 				}
 			}
-
-			return;
 		}
 
 		/*
@@ -701,7 +691,6 @@ namespace AdventureCS
 			rspeak(msg);
 			drop(AXE, Location);
 			Describe();
-			return;
 		}
 
 		/*
@@ -731,8 +720,6 @@ namespace AdventureCS
 				}
 			}
 			rspeak(msg);
-
-			return;
 		}
 
 		/*
@@ -740,7 +727,7 @@ namespace AdventureCS
 		*/
 		void vFill()
 		{
-			int	    i = 0;
+			int	  i = 0;
 			int   msg = 0;
 
 			switch (aeobject) {
@@ -848,7 +835,7 @@ namespace AdventureCS
 			int      msg = 0;
 
 			if (IsDark()) {
-				Console.WriteLine("I see no %s here.\n", probj(aeobject));
+				Console.WriteLine($"I see no {probj(aeobject)} here.\n");
 				return;
 			}
 			switch (aeobject) {
@@ -863,7 +850,7 @@ namespace AdventureCS
 					break;
 				case OYSTER:
 					if (!toting(OYSTER) || false == b_closed)
-					break;
+					    break;
 					ReadInputLine(192, 193, 54);
 					return;
 				default:
@@ -874,8 +861,6 @@ namespace AdventureCS
 				rspeak(msg);
 			else
 				vActionMsg(Verb);
-
-			return;
 		}
 
 		/*
@@ -894,8 +879,6 @@ namespace AdventureCS
 				rspeak(bonus);
 				normend();
 			}
-
-			return;
 		}
 
 		/*
@@ -907,10 +890,10 @@ namespace AdventureCS
 
 			if (aeobject == MIRROR) {
 				msg = 148;
-			if (b_closed) {
-				rspeak(197);
-				dwarfend();
-			}
+			    if (b_closed) {
+				    rspeak(197);
+				    dwarfend();
+			    }
 			}
 			else {
 				if (aeobject == VASE && Property[VASE] == 0) {
@@ -926,8 +909,6 @@ namespace AdventureCS
 				}
 			}
 			rspeak(msg);
-
-			return;
 		}
 
 		/*
@@ -941,8 +922,6 @@ namespace AdventureCS
 				rspeak(199);
 				dwarfend();
 			}
-
-			return;
 		}
 
 		/*
@@ -958,8 +937,6 @@ namespace AdventureCS
 			i = ActionMsg[nVerb];
 			if( i > 0 )
 				rspeak(i);
-
-			return;
 		}
 
 		/*
@@ -972,11 +949,8 @@ namespace AdventureCS
 			int      wtype = 0, wval = 0;
 
 			AnalyzeWord(word1, ref wtype, ref wval);
-			Console.WriteLine("%s what?\n", wtype == 2 ? word1 : word2);
-			return;
+			Console.WriteLine($"{(wtype == 2 ? word1 : word2)} what?\n");
 		}
-
-
 
 	}
 

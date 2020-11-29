@@ -51,8 +51,6 @@ namespace AdventureCS
 	            Console.WriteLine("** rspeak(%{0}) ** ", msg);
 
             DisplayText(pTextMsg, msg);
-
-            return;
         }
 
         private void pspeak(int item, int state)
@@ -61,7 +59,7 @@ namespace AdventureCS
             string[] strSpeak;
 
             if( true == Debug )
-	            Console.WriteLine("** pspeak(%d,%d) ** ", item, state);
+	            Console.WriteLine( $"** pspeak({item},{state}) ** ");
 
             strP = pObjDesc[item - 1];
             strSpeak = strP.Split('/');
@@ -76,30 +74,25 @@ namespace AdventureCS
             for (int nSpeakItem = state+1; nSpeakItem > state; nSpeakItem--)
                 Console.WriteLine(strSpeak[nSpeakItem]);
 
-                return;
         }
 
         private void desclg(int nLoc)
         {
 
             if(true == Debug)
-                Console.WriteLine("** desclg(%d) ** ", nLoc);
+                Console.WriteLine($"** desclg({nLoc}) ** ");
 
             DisplayText(pLongRmDesc, nLoc);
             Console.WriteLine("\n");
-
-            return;
         }
         private void descsh(int nLoc)
         {
 
             if (true == Debug)
-	            Console.WriteLine("** descsh(%d) ** ", nLoc);
+	            Console.WriteLine($"** descsh({nLoc}) ** ");
 
             DisplayText(pShortRmDesc, nLoc);
             Console.WriteLine("\n");
-
-            return;
         }
 
 
@@ -108,7 +101,6 @@ namespace AdventureCS
 
             --sMsg;
             string strMsg = pTbl[sMsg];
-
 
             if ('@' == strMsg[0]) {
                 
@@ -121,7 +113,6 @@ namespace AdventureCS
             else
                 Console.WriteLine(pTbl[sMsg]);
 
-            return;
         }
 
 
@@ -172,7 +163,6 @@ namespace AdventureCS
         private void dstroy(int obj)
         {
             Move(obj, 0);
-            return;
         }
         private void Move(int obj, int where) 
         {
@@ -182,7 +172,6 @@ namespace AdventureCS
 	            Carry(obj, from);
 
             drop(obj, where);
-            return;
         }
 
         /*
@@ -204,15 +193,13 @@ namespace AdventureCS
                 Place[obj] = -1;
                 ++Holding;
             }
-
-            return;
         }
         private void drop(int obj, int where) 
         {    
             
             if (obj < MAXOBJ) {
 	            if (Place[obj] == -1)
-	            --Holding;
+	                --Holding;
 
 	            Place[obj] = where;
             }
@@ -266,7 +253,7 @@ namespace AdventureCS
 
         private void bug(int n)
         {
-            Console.WriteLine("Fatal error number %d\n", n);
+            Console.WriteLine( $"Fatal error number {n}");
             throw new InvalidProgramException();
         }
 

@@ -9,7 +9,7 @@ namespace AdventureCS
     partial class TheAdventure
     {
 
-        bool english()
+        bool English()
         {
             string strMsg;
             int	type1, type2, val1, val2;
@@ -63,7 +63,7 @@ namespace AdventureCS
 		                        if(type2 == 2)
 		                            Verb = val2;
 		                        if(type2 == 1) {
-		                            Console.WriteLine("{0}\n", strMsg);
+		                            Console.WriteLine( $"{strMsg}\n" );
 		                            return false;
 		                        }
 		                    }
@@ -73,7 +73,7 @@ namespace AdventureCS
 			                        if (type2 == 1)
 				                        aeobject = val2;
 			                        if (type2 == 2) {
-				                        Console.WriteLine("{0}\n", strMsg);
+				                        Console.WriteLine( $"{strMsg}\n" );
 			                            return false;
 			                        }
 			                }
@@ -143,8 +143,6 @@ namespace AdventureCS
             
             if(words.Length == 2)
                 word2 = words[1];
-
-            return;
         }
 
     }

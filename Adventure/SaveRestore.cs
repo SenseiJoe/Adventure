@@ -25,7 +25,7 @@ namespace AdventureCS
                 strUserName = "SAVE";
 
             strUserName += ".ADV";
-            Console.WriteLine("Saving Adventure File \"{0}\"", strUserName);
+            Console.WriteLine($"Saving Adventure File \"{strUserName}\"");
 
             Serializer s = new Serializer();
             s.SerializeObject(strUserName, aData);
@@ -42,7 +42,7 @@ namespace AdventureCS
             string strFilename = Path.ChangeExtension(strInput, "ADV");
 
             if (true == string.IsNullOrEmpty(strFilename) || false == File.Exists(strFilename)) {
-                Console.WriteLine("Could Not Find File '{0}'", strFilename);
+                Console.WriteLine( $"Could Not Find File '{strFilename}'");
             }
             else {
                 aData.Clear();

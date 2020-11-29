@@ -43,7 +43,6 @@ namespace AdventureCS
         {
             InitVocabTable();
             DwarfLocation[DWARFMAX - 1] = ChestLocations;
-            return;
         }
 
         public void eadvent()
@@ -60,8 +59,6 @@ namespace AdventureCS
 
             if (true == m_bSaveGame)
                 SaveGame();
-
-            return;
         }
 
     }
